@@ -20,7 +20,8 @@
     "format:fix": "oxfmt",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "prepare": "pnpm build"
+    "prepare": "pnpm build",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
