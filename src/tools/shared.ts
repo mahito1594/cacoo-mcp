@@ -1,5 +1,5 @@
 import type { CallToolResult, ImageContent, TextContent } from "@modelcontextprotocol/sdk/types.js";
-import type { ApiError } from "../cacoo-api.js";
+import type { ApiError } from "../cacoo-api";
 
 /**
  * Helpers that keep MCP content block construction consistent across tools.

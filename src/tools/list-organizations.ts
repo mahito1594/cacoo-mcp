@@ -1,6 +1,6 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import type { CacooApi, OrganizationListResponse } from "../cacoo-api.js";
-import { fromApiError, okResult, textContent } from "./shared.js";
+import type { CacooApi, OrganizationListResponse } from "../cacoo-api";
+import { fromApiError, okResult, textContent } from "./shared";
 
 /**
  * Formats organizations as flat text that both humans and LLMs can scan quickly.

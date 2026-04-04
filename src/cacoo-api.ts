@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { err, ok, type Result } from "./types.js";
+import { err, ok, type Result } from "./types";
 
 const cacooBaseUrl = "https://cacoo.com/api/v1";
 const defaultTimeoutMs = 30_000;

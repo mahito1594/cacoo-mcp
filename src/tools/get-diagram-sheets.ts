@@ -1,7 +1,7 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import type { CacooApi, DiagramDetail } from "../cacoo-api.js";
-import { fromApiError, okResult, textContent } from "./shared.js";
+import type { CacooApi, DiagramDetail } from "../cacoo-api";
+import { fromApiError, okResult, textContent } from "./shared";
 
 /**
  * The sheet list only exists on the diagram detail endpoint, so this tool takes only `diagramId`

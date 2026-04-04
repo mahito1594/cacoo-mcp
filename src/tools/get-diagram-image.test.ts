@@ -1,8 +1,8 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { describe, expect, it, vi } from "vitest";
-import type { CacooApi } from "../cacoo-api.js";
-import { err, ok } from "../types.js";
-import { registerGetDiagramImageTool } from "./get-diagram-image.js";
+import type { CacooApi } from "../cacoo-api";
+import { err, ok } from "../types";
+import { registerGetDiagramImageTool } from "./get-diagram-image";
 
 const createMockApi = (overrides?: Partial<CacooApi>): CacooApi => ({
   getOrganizations: vi.fn(),

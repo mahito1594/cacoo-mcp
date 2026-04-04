@@ -1,9 +1,9 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { z } from "zod";
-import type { CacooApi, DiagramDetail } from "../cacoo-api.js";
-import type { Result } from "../types.js";
-import { fromApiError, imageContent, okResult, textContent } from "./shared.js";
+import type { CacooApi, DiagramDetail } from "../cacoo-api";
+import type { Result } from "../types";
+import { fromApiError, imageContent, okResult, textContent } from "./shared";
 
 /**
  * Input shape spanning both the Cacoo image API and the diagram detail API.

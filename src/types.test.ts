@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { err, ok } from "./types.js";
+import { err, ok } from "./types";
 
 describe("ok", () => {
   it("returns a success result with the given value", () => {

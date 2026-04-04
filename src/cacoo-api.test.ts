@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { createCacooApi } from "./cacoo-api.js";
+import { createCacooApi } from "./cacoo-api";
 
 const TEST_API_KEY = "test-api-key-secret";
 

@@ -3,11 +3,11 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { createCacooApi } from "./cacoo-api.js";
-import { registerGetDiagramImageTool } from "./tools/get-diagram-image.js";
-import { registerGetDiagramSheetsTool } from "./tools/get-diagram-sheets.js";
-import { registerListDiagramsTool } from "./tools/list-diagrams.js";
-import { registerListOrganizationsTool } from "./tools/list-organizations.js";
+import { createCacooApi } from "./cacoo-api";
+import { registerGetDiagramImageTool } from "./tools/get-diagram-image";
+import { registerGetDiagramSheetsTool } from "./tools/get-diagram-sheets";
+import { registerListDiagramsTool } from "./tools/list-diagrams";
+import { registerListOrganizationsTool } from "./tools/list-organizations";
 
 const envSchema = z.object({
   CACOO_API_KEY: z.string().min(1, "CACOO_API_KEY is required"),

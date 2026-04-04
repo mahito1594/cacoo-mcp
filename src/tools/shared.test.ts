@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import type { ApiError } from "../cacoo-api.js";
-import { errorResult, fromApiError, imageContent, okResult, textContent } from "./shared.js";
+import type { ApiError } from "../cacoo-api";
+import { errorResult, fromApiError, imageContent, okResult, textContent } from "./shared";
 
 describe("textContent", () => {
   it("returns a TextContent with type text", () => {

@@ -1,7 +1,7 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
-import type { CacooApi, DiagramListResponse } from "../cacoo-api.js";
-import { fromApiError, okResult, textContent } from "./shared.js";
+import type { CacooApi, DiagramListResponse } from "../cacoo-api";
+import { fromApiError, okResult, textContent } from "./shared";
 
 /**
  * Exposes only the smallest useful input surface for diagram discovery.
