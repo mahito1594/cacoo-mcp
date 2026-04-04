@@ -16,9 +16,11 @@ pnpm lint           # Run oxlint
 pnpm lint:fix       # Run oxlint --fix
 pnpm format         # Check formatting with oxfmt
 pnpm format:fix     # Fix formatting with oxfmt
+pnpm test           # Run tests with vitest
+pnpm test:coverage  # Run tests with coverage report
 ```
 
-There are no tests yet. Build output lands in `dist/`.
+Build output lands in `dist/`.
 
 ## Architecture
 
@@ -46,6 +48,7 @@ Each file exports a single `register*Tool(server, api)` function. Shared helpers
 ### Tool workflow (expected agent usage)
 
 ```
+list_organizations()                 → get organizationKey (if CACOO_ORGANIZATION_KEY not set)
 list_diagrams(keyword?)          → find diagramId, note sheetCount
   if sheetCount > 3:
     get_diagram_sheets(diagramId) → get sheetId values
