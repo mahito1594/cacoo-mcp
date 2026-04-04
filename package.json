@@ -1,12 +1,30 @@
 {
   "name": "@mahito1594/cacoo-mcp",
   "version": "0.1.0",
-  "private": true,
   "description": "An unofficial MCP Server for Cacoo <https://cacoo.com>",
+  "keywords": [
+    "cacoo",
+    "mcp",
+    "model-context-protocol",
+    "nulab"
+  ],
+  "homepage": "https://github.com/mahito1594/cacoo-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/mahito1594/cacoo-mcp/issues"
+  },
+  "license": "MIT",
+  "author": "Mahito Tanno",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahito1594/cacoo-mcp.git"
+  },
   "bin": {
     "cacoo-mcp": "./dist/index.mjs"
   },
   "files": [
+    "LICENSE",
+    "README.md",
+    "README_en.md",
     "dist"
   ],
   "type": "module",
@@ -40,7 +58,6 @@
     "vitest": "^4.1.2"
   },
   "engines": {
-    "node": ">=22",
-    "pnpm": ">=10"
+    "node": ">=22"
   }
 }
