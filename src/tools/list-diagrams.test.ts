@@ -40,9 +40,9 @@ describe("registerListDiagramsTool", () => {
     const { mockServer } = captureHandler();
     registerListDiagramsTool(mockServer, createMockApi());
 
-    expect(
-      (mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0],
-    ).toBe("list_diagrams");
+    expect((mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0]).toBe(
+      "list_diagrams",
+    );
   });
 
   it("returns formatted diagram list on success", async () => {

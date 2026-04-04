@@ -27,9 +27,9 @@ describe("registerGetDiagramSheetsTool", () => {
     const { mockServer } = captureHandler();
     registerGetDiagramSheetsTool(mockServer, createMockApi());
 
-    expect(
-      (mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0],
-    ).toBe("get_diagram_sheets");
+    expect((mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0]).toBe(
+      "get_diagram_sheets",
+    );
   });
 
   it("returns formatted sheet list on success", async () => {
@@ -61,9 +61,9 @@ describe("registerGetDiagramSheetsTool", () => {
   it("returns 'No sheets found' when diagram has no sheets", async () => {
     const { mockServer, getHandler } = captureHandler();
     const api = createMockApi({
-      getDiagram: vi.fn().mockResolvedValue(
-        ok({ diagramId: "diag-1", title: "My Diagram", sheets: [] }),
-      ),
+      getDiagram: vi
+        .fn()
+        .mockResolvedValue(ok({ diagramId: "diag-1", title: "My Diagram", sheets: [] })),
     });
     registerGetDiagramSheetsTool(mockServer, api);
 

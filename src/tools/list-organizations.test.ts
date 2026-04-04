@@ -28,9 +28,9 @@ describe("registerListOrganizationsTool", () => {
     const api = createMockApi();
     registerListOrganizationsTool(mockServer, api);
 
-    expect(
-      (mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0],
-    ).toBe("list_organizations");
+    expect((mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0]).toBe(
+      "list_organizations",
+    );
   });
 
   it("returns formatted organizations on success", async () => {

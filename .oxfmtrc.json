@@ -1,6 +1,11 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "ignorePatterns": ["dist/**"],
+  "ignorePatterns": [
+    "dist/**",
+    ".agents/skills/**/*.md",
+    ".claude/skills/**/*.md",
+    ".claude/plans/*.md"
+  ],
   "sortImports": {
     "newlinesBetween": false,
     "groups": [

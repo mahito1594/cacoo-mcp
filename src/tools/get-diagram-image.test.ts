@@ -38,9 +38,9 @@ describe("registerGetDiagramImageTool", () => {
     const { mockServer } = captureHandler();
     registerGetDiagramImageTool(mockServer, createMockApi());
 
-    expect(
-      (mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0],
-    ).toBe("get_diagram_image");
+    expect((mockServer.registerTool as ReturnType<typeof vi.fn>).mock.calls[0]![0]).toBe(
+      "get_diagram_image",
+    );
   });
 
   describe("with sheetId provided", () => {
@@ -172,9 +172,7 @@ describe("registerGetDiagramImageTool", () => {
     it("returns isError: true when diagram has no sheets", async () => {
       const { mockServer, getHandler } = captureHandler();
       const api = createMockApi({
-        getDiagram: vi
-          .fn()
-          .mockResolvedValue(ok({ diagramId: "diag-1", title: "T", sheets: [] })),
+        getDiagram: vi.fn().mockResolvedValue(ok({ diagramId: "diag-1", title: "T", sheets: [] })),
       });
       registerGetDiagramImageTool(mockServer, api);
 

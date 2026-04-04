@@ -61,9 +61,9 @@ describe("createCacooApi — getOrganizations", () => {
   });
 
   it("returns http error on non-ok response", async () => {
-    const fetchFn = vi.fn<typeof fetch>().mockResolvedValue(
-      new Response("Unauthorized", { status: 401, statusText: "Unauthorized" }),
-    );
+    const fetchFn = vi
+      .fn<typeof fetch>()
+      .mockResolvedValue(new Response("Unauthorized", { status: 401, statusText: "Unauthorized" }));
     const api = createCacooApi({ apiKey: TEST_API_KEY, fetchFn });
 
     const result = await api.getOrganizations();
@@ -131,9 +131,9 @@ describe("createCacooApi — getOrganizations", () => {
   });
 
   it("does not expose apiKey in error messages", async () => {
-    const fetchFn = vi.fn<typeof fetch>().mockResolvedValue(
-      new Response("Forbidden", { status: 403, statusText: "Forbidden" }),
-    );
+    const fetchFn = vi
+      .fn<typeof fetch>()
+      .mockResolvedValue(new Response("Forbidden", { status: 403, statusText: "Forbidden" }));
     const api = createCacooApi({ apiKey: TEST_API_KEY, fetchFn });
 
     const result = await api.getOrganizations();
@@ -260,9 +260,9 @@ describe("createCacooApi — getDiagram", () => {
   });
 
   it("returns http error on non-ok response", async () => {
-    const fetchFn = vi.fn<typeof fetch>().mockResolvedValue(
-      new Response("Not Found", { status: 404, statusText: "Not Found" }),
-    );
+    const fetchFn = vi
+      .fn<typeof fetch>()
+      .mockResolvedValue(new Response("Not Found", { status: 404, statusText: "Not Found" }));
     const api = createCacooApi({ apiKey: TEST_API_KEY, fetchFn });
 
     const result = await api.getDiagram("missing");
@@ -280,9 +280,11 @@ describe("createCacooApi — getDiagramImage", () => {
   let fetchFn: ReturnType<typeof vi.fn<typeof fetch>>;
 
   beforeEach(() => {
-    fetchFn = vi.fn<typeof fetch>().mockResolvedValue(
-      new Response(pngBuffer, { status: 200, headers: { "Content-Type": "image/png" } }),
-    );
+    fetchFn = vi
+      .fn<typeof fetch>()
+      .mockResolvedValue(
+        new Response(pngBuffer, { status: 200, headers: { "Content-Type": "image/png" } }),
+      );
   });
 
   it("returns ArrayBuffer on success", async () => {

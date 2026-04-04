@@ -38,6 +38,7 @@ There are no tests yet. Build output lands in `dist/`.
 ### Tools (`src/tools/`)
 
 Each file exports a single `register*Tool(server, api)` function. Shared helpers live in `src/tools/shared.ts`:
+
 - `okResult(...content)` / `errorResult(message)` — build `CallToolResult`
 - `fromApiError(error)` — converts `ApiError` → `CallToolResult` with `isError: true`
 - `imageContent(arrayBuffer)` — encodes PNG bytes as base64 `ImageContent`
