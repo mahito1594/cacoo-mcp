@@ -5,7 +5,8 @@
     "CHANGELOG.md",
     ".agents/skills/**/*.md",
     ".claude/skills/**/*.md",
-    ".claude/plans/*.md"
+    ".claude/plans/*.md",
+    "renovate.json"
   ],
   "sortImports": {
     "newlinesBetween": false,
