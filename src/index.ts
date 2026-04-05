@@ -3,6 +3,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import { version } from "../package.json";
 import { createCacooApi } from "./cacoo-api";
 import { registerGetDiagramImageTool } from "./tools/get-diagram-image";
 import { registerGetDiagramSheetsTool } from "./tools/get-diagram-sheets";
@@ -29,7 +30,7 @@ const createServer = (): McpServer => {
 
   const server = new McpServer({
     name: "@mahito1594/cacoo-mcp",
-    version: "0.1.0",
+    version,
   });
 
   registerListOrganizationsTool(server, api);
