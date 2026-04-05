@@ -52,10 +52,11 @@ jobs:
         run: pnpm lint
 
       - name: Test with coverage
+        id: test
         run: pnpm test:coverage
 
       - name: Upload coverage artifact
-        if: ${{ always() }}
+        if: ${{ always() && steps.test.conclusion != 'skipped' }}
         uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
         with:
           name: coverage

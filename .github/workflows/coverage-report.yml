@@ -20,7 +20,6 @@ jobs:
         github.event.workflow_run.conclusion == 'success'
       }}
     runs-on: ubuntu-latest
-
     concurrency:
       group: coverage-${{ github.event.workflow_run.id }}
       cancel-in-progress: true
