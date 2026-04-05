@@ -6,4 +6,5 @@ export default defineConfig({
   outDir: "dist",
   platform: "node",
   sourcemap: false,
+  minify: true,
 });
