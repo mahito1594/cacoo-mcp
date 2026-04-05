@@ -10,7 +10,6 @@ An unofficial MCP Server for [Cacoo](https://cacoo.com) that exposes read-only t
 
 ```bash
 pnpm build          # Compile TypeScript → dist/index.mjs via tsdown
-pnpm dev            # Watch mode build
 pnpm typecheck      # Type-check without emitting (tsc --noEmit)
 pnpm lint           # Run oxlint
 pnpm lint:fix       # Run oxlint --fix
@@ -59,9 +58,5 @@ When `sheetId` is omitted from `get_diagram_image`, the tool fetches the diagram
 
 ## Key constraints
 
-- `package.json` has `"private": true` — remove before publishing to npm
-- Node >= 22 required (`AbortSignal.timeout` is used for request timeouts)
-- Zod v4 is in use (`zod@^4`); schemas use `.safeParse()` not `.parse()` in the API client
-- `tsconfig.json` uses `"module": "preserve"` with bundler resolution; `.js` extensions in **internal** relative imports are not required — `moduleResolution: bundler` allows extensionless imports, and tsdown inlines internal modules at bundle time. External package subpath imports (e.g. `@modelcontextprotocol/sdk/server/mcp.js`) must keep `.js` when the package's `exports` wildcard map requires it
 - `console.log` is forbidden in all source files (stdout is JSON-RPC)
 - `organizationKey` resolution order: tool argument → `CACOO_ORGANIZATION_KEY` env var → `config` error directing agent to call `list_organizations` first

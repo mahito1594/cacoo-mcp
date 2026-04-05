@@ -1,6 +1,6 @@
 # @mahito1594/cacoo-mcp
 
-[English](./README_en.md)
+README: 日本語 | [English](./README_en.md)
 
 [Cacoo](https://cacoo.com) の非公式 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) サーバーです。Claude Code や Cursor などの AI コーディングエージェントが Cacoo の図の画像やメタデータを直接参照できるよう、読み取り専用のツールを提供します。
 
@@ -12,7 +12,13 @@
 
 ### 2. MCP クライアントを設定する
 
-**Claude Code** (`~/.claude/claude.json` または `.claude/claude.json`):
+**Claude Code**: 次のコマンドを実行してください
+
+```bash
+claude mcp add --env CACOO_API_KEY=your-api-key-here cacoo-mcp -- npx -y @mahito1594/cacoo-mcp
+```
+
+**Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json` または `%APPDATA%\Claude\claude_desktop_config.json`):
 
 ```json
 {
@@ -87,7 +93,7 @@ pnpm lint        # oxlint を実行
 
 ## 謝辞
 
-このプロジェクトは以下のサードパーティソフトウェアを使用しています。
+このプロジェクトは以下のサードパーティ Agent Skill を使用しています。
 
 - [contextual-commits](https://github.com/berserkdisruptors/contextual-commits) by Berserk Disruptors — MIT License
 

@@ -33,7 +33,6 @@
   },
   "scripts": {
     "build": "tsdown",
-    "dev": "tsdown --watch",
     "format": "oxfmt --check",
     "format:fix": "oxfmt",
     "lint": "oxlint",

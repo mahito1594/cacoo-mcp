@@ -1,5 +1,7 @@
 # @mahito1594/cacoo-mcp
 
+README: [日本語](./README.md) | English
+
 An unofficial [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for [Cacoo](https://cacoo.com). Exposes read-only tools so AI coding agents (Claude Code, Cursor, etc.) can reference Cacoo diagram images and metadata directly.
 
 ## Setup
@@ -10,7 +12,13 @@ Generate an API key from [your Cacoo account settings](https://cacoo.com/app/spa
 
 ### 2. Configure your MCP client
 
-**Claude Code** (`~/.claude/claude.json` or `.claude/claude.json`):
+**Claude Code**: Run the following command
+
+```bash
+claude mcp add --env CACOO_API_KEY=your-api-key-here cacoo-mcp -- npx -y @mahito1594/cacoo-mcp
+```
+
+**Claude Desktop** (`~/Library/Application Support/Claude/claude_desktop_config.json` or `%APPDATA%\Claude\claude_desktop_config.json`):
 
 ```json
 {
@@ -85,7 +93,7 @@ pnpm lint        # run oxlint
 
 ## Acknowledgements
 
-This project includes the following third-party software.
+This project includes the following third-party Agent Skills.
 
 - [contextual-commits](https://github.com/berserkdisruptors/contextual-commits) by Berserk Disruptors — MIT License
 
