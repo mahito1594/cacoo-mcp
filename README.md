@@ -91,11 +91,17 @@ pnpm typecheck   # 型チェック（出力なし）
 pnpm lint        # oxlint を実行
 ```
 
-## 謝辞
+## Agent Skills
 
 このプロジェクトは以下のサードパーティ Agent Skill を使用しています。
 
 - [contextual-commits](https://github.com/berserkdisruptors/contextual-commits) by Berserk Disruptors — MIT License
+
+以下のコマンドでインストールしてください。
+
+```bash
+pnpm dlx skills experimental_install
+```
 
 ## ライセンス
 

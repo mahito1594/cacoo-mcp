@@ -91,11 +91,17 @@ pnpm typecheck   # type-check without emitting
 pnpm lint        # run oxlint
 ```
 
-## Acknowledgements
+## Agent Skills
 
 This project includes the following third-party Agent Skills.
 
 - [contextual-commits](https://github.com/berserkdisruptors/contextual-commits) by Berserk Disruptors — MIT License
+
+To install, run:
+
+```bash
+pnpm dlx skills experimental_install
+```
 
 ## License
 
