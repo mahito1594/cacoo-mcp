@@ -144,7 +144,7 @@ vite.config.ts.timestamp-*
 .vite/
 
 # Agent Skills via `pnpm dlx skills add`
-.agents/skills/cotnextual-commit/
+.agents/skills/contextual-commit/
 .agents/skills/recall/
-.claude/skills/contextual-commit/
-.claude/skills/recall/
+.claude/skills/contextual-commit
+.claude/skills/recall
