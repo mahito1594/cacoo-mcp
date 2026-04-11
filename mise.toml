@@ -1,3 +1,5 @@
 [tools]
-node = "24"
-pnpm = "10"
+node = "24.14"
+
+[settings]
+idiomatic_version_file_enable_tools = ["pnpm"]
