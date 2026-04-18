@@ -28,6 +28,7 @@ const diagramListResponse = {
       diagramId: "diag-1",
       title: "My Diagram",
       sheetCount: 3,
+      created: "2024-01-01",
       updated: "2024-06-01",
       url: "https://cacoo.com/diagrams/diag-1",
     },
@@ -58,9 +59,29 @@ describe("registerListDiagramsTool", () => {
     expect(text).toContain("diagramId: diag-1");
     expect(text).toContain("title: My Diagram");
     expect(text).toContain("sheetCount: 3");
+    expect(text).toContain("created: 2024-01-01");
     expect(text).toContain("updated: 2024-06-01");
     expect(text).toContain("url: https://cacoo.com/diagrams/diag-1");
     expect(text).toContain("count: 1");
+  });
+
+  it("shows 'unknown' for created and updated when absent", async () => {
+    const { mockServer, getHandler } = captureHandler();
+    const api = createMockApi({
+      getDiagrams: vi.fn().mockResolvedValue(
+        ok({
+          result: [{ diagramId: "diag-1", title: "My Diagram" }],
+          count: 1,
+        }),
+      ),
+    });
+    registerListDiagramsTool(mockServer, api);
+
+    const result = await getHandler()({ offset: 0, limit: 50 });
+
+    const text = (result as { content: [{ text: string }] }).content[0]!.text;
+    expect(text).toContain("created: unknown");
+    expect(text).toContain("updated: unknown");
   });
 
   it("returns 'No diagrams found' when result is empty", async () => {
