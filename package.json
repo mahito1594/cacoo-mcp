@@ -37,7 +37,7 @@
     "format:fix": "oxfmt",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "prepare": "pnpm build",
+    "prepack": "pnpm build",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc"
