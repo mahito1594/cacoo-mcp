@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/mahito1594/cacoo-mcp/compare/cacoo-mcp-v0.2.0...cacoo-mcp-v0.3.0) (2026-04-18)
+
+
+### Features
+
+* **diagram-tools:** expose created and updated dates in list_diagrams and get_diagram_sheets ([#25](https://github.com/mahito1594/cacoo-mcp/issues/25)) ([dfb052e](https://github.com/mahito1594/cacoo-mcp/commit/dfb052e2ebda474b53ff396e69552d9294cec14a))
+
 ## [0.2.0](https://github.com/mahito1594/cacoo-mcp/compare/cacoo-mcp-v0.1.0...cacoo-mcp-v0.2.0) (2026-04-05)
 
 
