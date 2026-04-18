@@ -39,6 +39,8 @@ describe("registerGetDiagramSheetsTool", () => {
         ok({
           diagramId: "diag-1",
           title: "My Diagram",
+          created: "2024-01-01",
+          updated: "2024-06-01",
           sheets: [
             { uid: "sheet-1", name: "Page 1", width: 800, height: 600 },
             { uid: "sheet-2", name: "Page 2", width: 1024, height: 768 },
@@ -51,11 +53,33 @@ describe("registerGetDiagramSheetsTool", () => {
     const result = await getHandler()({ diagramId: "diag-1" });
 
     const text = (result as { content: [{ text: string }] }).content[0]!.text;
+    expect(text).toContain("created: 2024-01-01");
+    expect(text).toContain("updated: 2024-06-01");
     expect(text).toContain("sheetId: sheet-1");
     expect(text).toContain("name: Page 1");
     expect(text).toContain("width: 800");
     expect(text).toContain("height: 600");
     expect(text).toContain("sheetId: sheet-2");
+  });
+
+  it("shows 'unknown' for created and updated when absent", async () => {
+    const { mockServer, getHandler } = captureHandler();
+    const api = createMockApi({
+      getDiagram: vi.fn().mockResolvedValue(
+        ok({
+          diagramId: "diag-1",
+          title: "My Diagram",
+          sheets: [{ uid: "sheet-1", name: "Page 1" }],
+        }),
+      ),
+    });
+    registerGetDiagramSheetsTool(mockServer, api);
+
+    const result = await getHandler()({ diagramId: "diag-1" });
+
+    const text = (result as { content: [{ text: string }] }).content[0]!.text;
+    expect(text).toContain("created: unknown");
+    expect(text).toContain("updated: unknown");
   });
 
   it("returns 'No sheets found' when diagram has no sheets", async () => {

@@ -28,6 +28,7 @@ const formatDiagram = (diagram: DiagramListResponse["result"][number]): string =
     `diagramId: ${diagram.diagramId}`,
     `title: ${diagram.title}`,
     `sheetCount: ${diagram.sheetCount ?? "unknown"}`,
+    `created: ${diagram.created ?? "unknown"}`,
     `updated: ${diagram.updated ?? "unknown"}`,
     `url: ${diagram.url ?? "unknown"}`,
   ].join("\n");

@@ -25,6 +25,8 @@ const formatSheets = (diagram: DiagramDetail): string => {
   return [
     `diagramId: ${diagram.diagramId}`,
     `title: ${diagram.title}`,
+    `created: ${diagram.created ?? "unknown"}`,
+    `updated: ${diagram.updated ?? "unknown"}`,
     "",
     diagram.sheets
       .map((sheet) =>
