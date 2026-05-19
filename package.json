@@ -50,7 +50,7 @@
     "@types/node": "24.12.4",
     "@vitest/coverage-v8": "4.1.6",
     "oxfmt": "0.50.0",
-    "oxlint": "1.63.0",
+    "oxlint": "1.65.0",
     "oxlint-tsgolint": "0.22.1",
     "tsdown": "0.22.0",
     "typescript": "6.0.3",
