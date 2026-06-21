@@ -1,5 +1,5 @@
 [tools]
-node = "24.16"
+node = "24.17"
 
 [settings]
 idiomatic_version_file_enable_tools = ["pnpm"]
